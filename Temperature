@@ -1,0 +1,21 @@
+public class MyClass {
+    public static void main(String args[]) {
+      
+     
+      
+      
+      boolean isPositive(int temperature) {
+          return temperature > 0;
+      }
+      
+      boolean result = isPositive(12);
+          
+          if(result){
+              System.out.println("Temperatura jest dodatnia");
+          }
+          else {
+              System.out.println("Temperatura jest ujemna");
+          }
+      
+    }
+}
