@@ -1,2 +1,42 @@
-# -Exercises
-Exercises
+import java.util.Scanner;
+public class MyClass {
+       public static void main(String[] args) {
+           
+        String odp;
+        Scanner odczyt = new Scanner(System.in);
+        System.out.println("Witaj, czy chcesz rozpocząć? tak/nie + enter");
+        odp = odczyt.nextLine();
+        switch (odp) {
+            
+            case "tak":
+                int liczbaUzytkownika;
+                Scanner odczyt2 = new Scanner(System.in);
+                System.out.println("Wpisz jakąś liczbę, a dowiesz się czy jest liczbą pierwszą.");
+                liczbaUzytkownika = odczyt2.nextInt();
+                int liczbaDzielnikow = 0;
+
+                
+                for (int i = 1; i <= liczbaUzytkownika; i++) {
+                    if (liczbaUzytkownika % 2 == 0) {
+                        break;
+                        
+                    }
+                    if (liczbaUzytkownika % i == 0)
+                        liczbaDzielnikow++;
+                }
+
+                if (liczbaDzielnikow == 2 || liczbaUzytkownika == 2) {
+                    System.out.println(liczbaUzytkownika + " to liczba pierwsza");
+                } else {
+                    System.out.println(liczbaUzytkownika + " nie jest liczbą pierwszą");
+                }
+                break;
+                
+            case "nie":
+                System.out.println("Koniec programu");
+                break;
+            default:
+                System.out.println("Prosimy spróbować ponownie.");
+        }
+    }
+}
